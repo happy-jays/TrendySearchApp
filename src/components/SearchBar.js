@@ -42,7 +42,7 @@ const SearchBar = () => {
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     // setSearchResults(filteredResults);
-    navigate('/results', { state: {searchResults: filteredResults} });
+    navigate('/results', { state: {filteredResults, products} });
   };
 
   const handleSearchBarClick = () => {

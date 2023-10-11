@@ -112,8 +112,10 @@ body {
 /* Search results container */
 .search-results {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 0;
   background-color: #f2f2f2;
+  flex: 3;
+  min-height: 100vh;
 }
 
 /* Adjust the number of columns for different screen sizes */
@@ -160,13 +162,60 @@ body {
 
 /* Search result item */
 .search-result-item {
+  position: relative; 
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  height: 400px;
 }
+.wishlist-icon {
+  position: absolute; /* Position the heart icon absolutely within the relative parent */
+  top: 10px; /* Adjust the top position as needed to position the heart icon */
+  right: 15px; /* Adjust the right position as needed to position the heart icon */
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth color transition */
+  z-index: 1;
+}
+.search-result-item:hover::before {
+  content: "View Product";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 255, 0.7); 
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  z-index: 2; 
+  display: none;
+  width: 90%;
+}
+
+.search-result-item:hover::before {
+  display: block;
+}
+
+/* Adjust the "View Product" button size and font properties */
+.search-result-item:hover::before {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Adjust the size of the wishlist icon for better alignment */
+.search-result-item:hover .wishlist-icon {
+  font-size: 30px;
+  top: 5px;
+}
+.wishlist-icon.active {
+  color: red; /* Red color when the product is in the wishlist */
+}
+
+
 
 /* Image in the search result */
 .search-result-item img {
@@ -183,4 +232,34 @@ body {
 .result-details p {
   margin: 5px 0;
   font-size: 14px;
+}
+
+/* Search Results */
+.row{
+  display: flex;
+}
+.col1{
+  flex: 1;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  border: 1px solid lightgray;
+}
+/* Filters */
+.filters{
+  margin: 20px;
+}
+.ratings{
+  display: flex;
+  flex-direction: column;
+}
+.price-filter{
+  display: flex;
+  flex-direction: column;
+}
+.fltr-btn{
+  margin: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: chartreuse;
+  border-radius: 5px;
 }
