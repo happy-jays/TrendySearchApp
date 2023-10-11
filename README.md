@@ -42,3 +42,11 @@ To run this Project
 
 ## ScreenShots
 ![trendy-search-app netlify app_](https://github.com/happy-jays/TrendySearchApp/assets/56588611/8973c568-dea4-406b-9353-0cbd980d0803)
+
+![trendy-search-app netlify app_ (1)](https://github.com/happy-jays/TrendySearchApp/assets/56588611/023095f7-e7b9-499d-b022-8b653547d016)
+
+![localhost_3000_results](https://github.com/happy-jays/TrendySearchApp/assets/56588611/4e6b710b-cc4e-4fe6-9f84-39c8af1012ab)
+
+![localhost_3000_results (1)](https://github.com/happy-jays/TrendySearchApp/assets/56588611/5e43cf55-5c88-486f-a72d-dbaff9aea79a)
+
+![localhost_3000_results (2)](https://github.com/happy-jays/TrendySearchApp/assets/56588611/163dc66e-7f01-4d1d-8afd-9cca4ba6c1ef)
