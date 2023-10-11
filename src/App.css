@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Apply a global reset and set some basic styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   }
+
+
+
+/* SearchBar.css */
+
+/* Container for the entire search bar */
+.search-bar {
+   margin: 10px auto;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search input container */
+.search-input {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+  
+}
+
+/* Search input field */
+.search-input input {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+/* Search icon */
+.search-icon {
+  margin-right: 5px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Trending dropdown */
+.trending-dropdown{
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 450px;
+}
+#lts-trnd{
+  margin:5px;
+  margin-left:10px ;
+  margin-top: 10px;
+}
+#plr-sgs{
+  margin:5px;
+  margin-left:10px ;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.trending-list {
+  list-style: none;
+  padding: 0;
+  /* border: 1px solid #ccc;
+  background-color: #fff; */
+  margin: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* max-height: 150px; 
+  overflow-x: auto;  */
+  display: flex; /* Use flexbox to create a row layout */
+  flex-wrap: wrap; 
+}
+
+.trending-item {
+  flex: 1; /* Distribute items evenly in a row (5 items in 100% width) */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  /* border-right: 1px solid #ccc;  */
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.trending-item:last-child {
+  border-right: none; /* Remove the border from the last item */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.trending-item img {
+  width: 100%; /* Adjust the image width as needed */
+  height: 150px; /* Adjust the image height as needed */
+  margin-bottom: 5px; /* Add some spacing between image and text */
+}
+.popular-item{
+  margin: 8px;
+  margin-left: 14px;
+  font-size: 15px;
+  color: rgb(14, 0, 0);
+}
+/* Search results container */
+/* SearchBar.css */
+
+/* ... Existing styles ... */
+
+/* Search results container */
+.search-results {
+  display: grid;
+  grid-gap: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Adjust the number of columns for different screen sizes */
+@media (min-width: 768px) {
+  body {
+    background-image: url(https://cdn.pixabay.com/photo/2017/08/06/15/13/woman-2593366_1280.jpg);
+    background-size: cover;
   }
-  to {
-    transform: rotate(360deg);
+  /* Display 3 items in a row for larger displays */
+  .search-results {
+    grid-template-columns: repeat(3, 1fr);
   }
+  .search-input {
+    width: 600px;      
+  }
+  .trending-list {
+    width: 800px;
+   
+    }
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: url(https://cdn.pixabay.com/photo/2020/12/13/16/37/woman-5828786_1280.jpg);
+    background-size: cover;
+  }
+  /* Display 1 item in a row for smaller displays */
+  .search-results {
+    grid-template-columns: 1fr;
+  }
+  .search-input {
+    width: 300px;
+     
+  }
+  .trending-dropdown{
+    width: 90%;
+    height: 700px;
+  }
+  .trending-list {
+    width:90% ;
+    }
+}
+
+
+/* Search result item */
+.search-result-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* Image in the search result */
+.search-result-item img {
+ width: 100%;
+  height: 300px;
+}
+
+/* Details in the search result */
+.result-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.result-details p {
+  margin: 5px 0;
+  font-size: 14px;
 }
