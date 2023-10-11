@@ -40,3 +40,5 @@ To run this Project
 ## API Used
     The app uses the Faker API to generate fake data for products and trend suggestions. The API is integrated into the app to provide realistic-looking data for testing and development. You can explore the Faker API documentation to understand the available data endpoints and fields.
 
+## ScreenShots
+![trendy-search-app netlify app_](https://github.com/happy-jays/TrendySearchApp/assets/56588611/8973c568-dea4-406b-9353-0cbd980d0803)
