@@ -13,7 +13,7 @@ const SearchBar = () => {
 
   useEffect(() => {
     // Generate some fake trending clothes data
-    const fakeProducts = Array.from({ length: 100 }, () => ({
+    const fakeProducts = Array.from({ length: 50 }, () => ({
       id: uuidv4(),
       name: faker.commerce.productName(),
       image: faker.image.urlPicsumPhotos(),
