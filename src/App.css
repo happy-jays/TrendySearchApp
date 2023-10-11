@@ -112,7 +112,7 @@ body {
 /* Search results container */
 .search-results {
   display: grid;
-  grid-gap: 0;
+  grid-row-gap: 0px;
   background-color: #f2f2f2;
   flex: 3;
   min-height: 100vh;
